@@ -15,7 +15,7 @@ content-type: application/json
 ### Register new client
 POST http://localhost:3000/client HTTP/1.1
 content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTgyNzQ3LCJleHAiOjE2MTExODQ1NDd9.R3BSF-MZr_ClP7wFQC9U4hL-iyIEVg_McBE7YbRKNmU
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
 
 {
   "name": "any_name",
@@ -23,10 +23,20 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg
   "neighborhood": "Martim de Sá",
   "city": "Caraguatatuba",
   "uf": "SP",
-  "telephone": "(99) 99999-9998",
-  "email": "any1#mail.com"
+  "telephone": "(99) 99999-9999",
+  "email": "any#mail.com"
 }
 
-### Find clients 
+### List client
+GET http://localhost:3000/clients HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
+
+
+### Find client
 GET http://localhost:3000/client/6008ad01b7f04916004eb50c HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
+
+
+### Destroy client
+GET http://localhost:3000/client/delete/6008ad01b7f04916004eb50c HTTP/1.1
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw

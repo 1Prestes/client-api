@@ -19,7 +19,15 @@ module.exports = {
   },
   async show(req, res) {
     try {
-      const client = await Client.findOne({ _id: req.params.id });
+      const client = await Client.findById(req.params.id);
+      return res.send(client);
+    } catch (err) {
+      return res.status(400).send({ error: err });
+    }
+  },
+  async destroy(req, res) {
+    try {
+      const client = await Client.findByIdAndDelete(req.params.id);
       return res.send(client);
     } catch (err) {
       return res.status(400).send({ error: err });

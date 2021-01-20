@@ -11,6 +11,7 @@ router.post("/login", AuthController.create);
 
 router.get("/clients", AuthController.isAuth, Client.index);
 router.get("/client/:id", AuthController.isAuth, Client.show);
+router.get("/client/delete/:id", AuthController.isAuth, Client.destroy);
 router.post("/client", AuthController.isAuth, Client.create);
 
 module.exports = router;
