@@ -23,6 +23,10 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg
   "neighborhood": "Martim de Sá",
   "city": "Caraguatatuba",
   "uf": "SP",
-  "telephone": "(99) 99999-9999",
-  "email": "any#mail.com"
+  "telephone": "(99) 99999-9998",
+  "email": "any1#mail.com"
 }
+
+### Find clients 
+GET http://localhost:3000/client/6008ad01b7f04916004eb50c HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
