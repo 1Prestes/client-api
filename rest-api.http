@@ -15,7 +15,7 @@ content-type: application/json
 ### Register new client
 POST http://localhost:3000/client HTTP/1.1
 content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYxMTE4MDAwOSwiZXhwIjoxNjExMTgxODA5fQ.tMceSDhZMZkfHvcqySNeF0i5tNrNCw7SrelzXy1FRwQ
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTgyNzQ3LCJleHAiOjE2MTExODQ1NDd9.R3BSF-MZr_ClP7wFQC9U4hL-iyIEVg_McBE7YbRKNmU
 
 {
   "name": "any_name",
