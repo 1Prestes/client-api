@@ -12,8 +12,17 @@ content-type: application/json
     "password": 1234
 }
 
-### List Clients 
-
-GET http://localhost:3000/clients HTTP/1.1
+### Register new client
+POST http://localhost:3000/client HTTP/1.1
 content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYxMTE2NzM1MiwiZXhwIjoxNjExMTY5MTUyfQ.pHH4-DdNdSK2iTSf0KdaTdJtr4yBD7J2I-dDbjr3yA0
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYxMTE4MDAwOSwiZXhwIjoxNjExMTgxODA5fQ.tMceSDhZMZkfHvcqySNeF0i5tNrNCw7SrelzXy1FRwQ
+
+{
+  "name": "any_name",
+  "address": "R. Bartolomeu Bueno da Silva",
+  "neighborhood": "Martim de Sá",
+  "city": "Caraguatatuba",
+  "uf": "SP",
+  "telephone": "(99) 99999-9999",
+  "email": "any#mail.com"
+}

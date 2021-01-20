@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
 
+const Client = require('../controllers/clientController')
+
 function isAuth(req, res, next) {
   const token = req.headers["x-access-token"];
   if (!token)
@@ -32,8 +34,6 @@ router.post("/login", (req, res) => {
   } else res.status(401).send("Invalid login or password!");
 });
 
-router.get("/clients", isAuth, (req, res) => {
-  res.json({ name: "Neumir", UF: "SP" });
-});
+router.post("/client", isAuth, Client.create);
 
 module.exports = router;
