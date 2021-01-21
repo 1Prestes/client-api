@@ -1,3 +1,4 @@
+const { update } = require("../models/client");
 const Client = require("../models/client");
 
 module.exports = {
@@ -29,6 +30,27 @@ module.exports = {
     try {
       const client = await Client.findByIdAndDelete(req.params.id);
       return res.send(client);
+    } catch (err) {
+      return res.status(400).send({ error: err });
+    }
+  },
+  async update(req, res) {
+    const {
+      id,
+      name,
+      address,
+      neighborhood,
+      city,
+      uf,
+      telephone,
+      email,
+    } = req.body;
+
+    const client = { name, address, neighborhood, city, uf, telephone, email };
+
+    try {
+      await Client.updateOne({ _id: id }, client);
+      return res.send(await Client.findById(id));
     } catch (err) {
       return res.status(400).send({ error: err });
     }

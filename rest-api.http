@@ -15,7 +15,7 @@ content-type: application/json
 ### Register new client
 POST http://localhost:3000/client HTTP/1.1
 content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg5OTM1LCJleHAiOjE2MTExOTE3MzV9.Ajslf5xEPVSddXSjLdl80KwGE8pz09nQP0VnxONZMe8
 
 {
   "name": "any_name",
@@ -29,14 +29,28 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg
 
 ### List client
 GET http://localhost:3000/clients HTTP/1.1
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
-
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg5OTM1LCJleHAiOjE2MTExOTE3MzV9.Ajslf5xEPVSddXSjLdl80KwGE8pz09nQP0VnxONZMe8
 
 ### Find client
-GET http://localhost:3000/client/6008ad01b7f04916004eb50c HTTP/1.1
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
-
+GET http://localhost:3000/client/6008c28f30fa86132c8e2234 HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg5OTM1LCJleHAiOjE2MTExOTE3MzV9.Ajslf5xEPVSddXSjLdl80KwGE8pz09nQP0VnxONZMe8
 
 ### Destroy client
 GET http://localhost:3000/client/delete/6008ad01b7f04916004eb50c HTTP/1.1
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg1ODI3LCJleHAiOjE2MTExODc2Mjd9.Z3WdiKtDvZUXqaYNo3XBSQ4mPeS2FD6indrgOZEEWhw
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg5OTM1LCJleHAiOjE2MTExOTE3MzV9.Ajslf5xEPVSddXSjLdl80KwGE8pz09nQP0VnxONZMe8
+
+### Update client
+POST http://localhost:3000/client/update HTTP/1.1
+content-type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExMTg5OTM1LCJleHAiOjE2MTExOTE3MzV9.Ajslf5xEPVSddXSjLdl80KwGE8pz09nQP0VnxONZMe8
+
+{
+  "id": "6008c28f30fa86132c8e2234",
+  "name": "update_name",
+  "address": "R. Bartolomeu Bueno da Silva",
+  "neighborhood": "Martim de Sá",
+  "city": "Caraguatatuba",
+  "uf": "SP",
+  "telephone": "(99) 99999-9999",
+  "email": "any#mail.com"
+}
