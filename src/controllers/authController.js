@@ -22,9 +22,9 @@ module.exports = {
   create(req, res) {
     const { login, password } = req.body;
 
-    if (login === "admin" && password === 1234) {
+    if (login === "admin" && password == 1234) {
       const token = jwt.sign({ id: 1 }, process.env.SECRET, {
-        expiresIn: "30m",
+        expiresIn: "30 minutes",
       });
       res.json({ auth: "You are logged!", token });
     } else res.status(401).send("Invalid login or password!");
